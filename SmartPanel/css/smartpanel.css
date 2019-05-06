@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.smartPanelSide .pnul{
+    list-style-type: none;
+}
+
+/*图片*/
+.smartPanelSide .pnul .pnli a{
+    border: 0;
+}
+
+.smartPanelSide .pnul .pnli .ulimg {
+    margin: 9px;
+    width: 28px;
+    height: 28px;
+}
+
+/* smartPanelSide 菜单*/
+.smartPanelSide {
+    position: fixed;
+    width: 45px;
+    height: 275px;
+    right: 0;
+    top: 80px;
+    z-index: 999;
+}
+
+.smartPanelSide .pnul .pnli {
+    width: 45px;
+    height: 45px;
+    float: left;
+    position: relative;
+    border-bottom: 2px solid #ffffff;
+}
+
+.smartPanelSide .pnul .pnli .sidebox {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    transition: all 0.3s;
+    background: #b0b0b0;
+    opacity: 0.8;
+    filter: Alpha(opacity=80);
+    color: white;
+    font: 14px/45px "微软雅黑";
+    font-weight: bolder;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.smartPanelSide .pnul .pnli .sidetop {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    background: #b0b0b0;
+    opacity: 0.8;
+    filter: Alpha(opacity=80);
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+.smartPanelSide .pnul .pnli .sidetop:hover {
+    background: #777777;
+    opacity: 1;
+    filter: Alpha(opacity=100);
+}
+
+.smartPanelSide .pnul .pnli .ulimg {
+    float: left;
+}
+
+/*-----面板-----*/
+.smartPanelSide .smartpanel {
+    margin-right: 47px;
+    height: 520px;
+    width: 280px;
+    position: absolute;
+    float: left;
+    right: 0;
+    /*    min-height: 100px;*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#fff), color-stop(.2, #eeeeee));
+    background:-webkit-linear-gradient(top, #fff,#eeeeee);/* Firefox 3.6+ Chrome10+,Safari5.1+*/
+    background:-moz-linear-gradient(top, #fff, #eeeeee);/*Firefox 3.6+*/
+    background:-o-linear-gradient(top, #fff, #eeeeee);/*Opera 11.10+*/
+    background:-ms-linear-gradient(top, #fff, #eeeeee);/* IE10*//*IE11+*/
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#fff', endColorstr='#eeeeee',gradientType=0);
+  /*  background:#b0b0b0;*/
+    border: 1px solid #d8d8d8;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/*-----设置框-----*/
+.smartPanelSide .settingBox {
+    margin-right: 47px;
+  /*  height: 100px;*/
+    width: 150px;
+    position: absolute;
+    float: left;
+    right: 0;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#fff), color-stop(.2, #eeeeee));/*safari、 Chrome*/
+    background:-webkit-linear-gradient(top, #fff,#eeeeee);/* Firefox 3.6+ Chrome10+,Safari5.1+*/
+    background:-moz-linear-gradient(top, #fff, #eeeeee);/*Firefox 3.6+*/
+    background:-o-linear-gradient(top, #fff, #eeeeee);/*Opera 11.10+*/
+    background:-ms-linear-gradient(top, #fff, #eeeeee);/* IE10*//*IE11+*/
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#fff', endColorstr='#eeeeee',gradientType=0);/* IE6-9 */
+/*  background:#b0b0b0;*/
+    border: 1px solid #d8d8d8;
+    padding: 15px 0px 0px 15px;
+    border-radius: 5px;
+    font: 14px/20px "微软雅黑";/*字号、行高*/
+    color:black;
+}
+
+/*选择字体*/
+.settingBox .showOrhide {
+    font-size: 13px;
+    color:black;
+}
+/*选择*/
+.smartPanelSide .settingBox label input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    margin: 0px 8px;
+}
+
+.settingBox label input[type="radio"]:after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid #bfbfbf;
+}
+
+.settingBox label input[type="radio"]:checked:after {
+    background: #0593d3;
+    border: 3px solid #fff;
+}
+
+/*确认按钮*/
+.settingBox .setBoxbtn {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    float: right;
+    position: relative;
+    top:-25px;
+    right: 20px;
+}
+
+.hhhbtn {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    margin:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    float: left;
+}

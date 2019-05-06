@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面</title>
+    <script src="http://39.108.251.214:83/SmartPannel/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="http://39.108.251.214:83/SmartPannel/js/panel.js" type="text/javascript"></script>
+    <script type="application/javascript">
+
+        function selfSmartPanel(){
+            new AjaxRequest({
+                type: "POST",
+                url:APPLICATION_SERVER + "/app/pcfid/AjaxVANTIQData",
+                data:{
+                    "Url": smartPanelUrl,
+                    "Authorization":VANTIQ_Authorization,
+                    "Method":"POST",
+                    "Data":{ "url":"www.baidu.com/text2" }
+                },
+                dataType:"JSON",
+                callBack: function(rs){
+                    var divDataHtml = '<div style="height:520px;width: 280px;background-color: bisque">'+
+                            '<div class="row">'+
+                           ' <div class="col-md-12" style="display: flex; justify-content: center;">'+
+                            '<div class="btn-group  btn-group-lg" role="group" aria-label="...">'+
+                            '<button type="button" class="btn btn-default">我的代办</button>'+
+                            '<button type="button" class="btn btn-default">我的消息</button>'+
+                            '</div>'+
+                            '</div>'+
+                            '</div>'+
+                            '<div class="row">'+
+                            '<div class="col-md-12" id="view1" >'+
+                            '<ul class="list-group">'+
+                            '<li class="list-group-item">'+
+                            '<h6>修订1：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                          '<h6>修订：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                   ' </li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>修订：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                   ' <li class="list-group-item">'+
+                            '<h6>修订：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                   '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>修订：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '</ul>'+
+                    '</div>'+
+                    '<div class="col-md-12" id="view2" style="display:none;">'+
+                           '<ul class="list-group">'+
+                           '<li class="list-group-item">'+
+                            '<h6>确定2：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '</ul>'+
+                    '</div>'+
+                    '<div class="col-md-12" id="view3" style="display:none;">'+
+                            '<ul class="list-group">'+
+                            '<li class="list-group-item">'+
+                            '<h6>确定3：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                   '</li>'+
+                    '<li class="list-group-item">'+
+                           '<h6>确定：xxxx</h6>'+
+                    '<span>系统开发/王诩</span>'+
+                    '<span class="timeClass">2018年12月10日</span>'+
+                    '</li>'+
+                    '<li class="list-group-item">'+
+                            '<h6>确定：xxxx</h6> '+
+                    '<span>系统开发/王诩</span> <span class="timeClass">2018年12月10日</span> </li></ul> </div>'+
+                    '<div class="col-md-12" style=" display: flex;justify-content: center;">'+
+                    '<ol class="carousel-indicators">'+
+                            '<li class="active" id="li1"></li>'+
+                            '<li id="li2"></li>'+
+                            '<li id="li3"></li>'+
+                           '</ol>'+
+                           '</div>'+
+                            '</div>'+
+                            '</div>';
+                    //var divDataHtml ='待办：<br><a href="http://www.baidu.com" target="_blank">1111111---</a><br><a href="http://www.baidu.com" target="_blank">22222---</a>';
+                    $.smartPanel("#panel01",divDataHtml);//自定义
+                }
+            });
+        }
+        //处理数据 的回调函数
+        function echarsLineMap(type){
+            new AjaxRequest({
+                type: "POST",
+                url:APPLICATION_SERVER + "/app/pcfid/AjaxVANTIQData",
+                data:{
+                    "Url": smartPanelUrl,
+                    "Authorization":VANTIQ_Authorization,
+                    "Method":"POST",
+                    "Data":{ "url":"www.baidu.com/lineMap2" }
+                },
+                dataType:"JSON",
+                callBack: function(rs){
+                    var params ={
+                        "panelDivId":"#panel01",
+                        "xdata":rs.data.x,
+                        "sdata":rs.data.y,
+                        "type":type
+                    }
+                    $.smartPanel_lineMap(params);
+                }
+            });
+        }
+        function textDemo(){
+            new AjaxRequest({
+                type: "POST",
+                url:APPLICATION_SERVER + "/app/pcfid/AjaxVANTIQData",
+                data:{
+                    "Url": smartPanelUrl,
+                    "Authorization":VANTIQ_Authorization,
+                    "Method":"POST",
+                    "Data":{ "url":"www.baidu.com/text3" }
+                },
+                dataType:"JSON",
+                callBack: function(rs){
+                    var params ={
+                        "title":rs.data.title,
+                        "content":rs.data.content,
+                        "user":rs.data.user+"1111"
+                    }
+                    var divDataHtml = $.smartPanel_text(params);
+                    $.smartPanel("#panel01",divDataHtml);
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+<button id='btn' class='hhhbtn' onclick='selfSmartPanel()'>通用调用</button>
+<button id='btn11' class='hhhbtn'  onclick='echarsLineMap("line")'>规范折线图</button>
+<button id='btn12' class='hhhbtn' onclick='echarsLineMap("bar")'>规范柱状图</button>
+<button id='btn22' class='hhhbtn'  onclick='textDemo()'>文本模板</button>
+<h1><a href="test01.html" >返回</a></h1>
+
+</body>
+
+</html>
