@@ -1,0 +1,417 @@
+﻿@charset "utf-8";
+.wmpanelSide a {
+    text-decoration: none;
+}
+
+.wmpanelSide {
+    width: 54px;
+    height: 320px;
+    list-style-type: none;
+    right: 0;
+    position: fixed;
+    top: 160px;
+    z-index: 999;
+}
+
+/*前面的按钮*/
+.pnul {
+    width: 54px;
+    height: 320px;
+    list-style-type: none;
+    right: 0;
+    position: fixed;
+    top: 160px;
+    z-index: 999;
+    padding-inline-start: 0px
+}
+
+.pnli {
+    width: 54px;
+    height: 64px;
+    float: left;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #E4E7ED;
+    border-bottom: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 1px;
+    right: 0;
+}
+
+.wmside {
+    position: absolute;
+    width: 54px;
+    height: 64px;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    overflow: hidden;
+    border-bottom: 1px solid #E4E7ED;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 90px;
+    color: #55595F;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wmside:hover {
+    background: #F5F7FA;
+    color: #C5123F;
+}
+
+/*返回顶部按钮*/
+.pnli2 {
+    width: 54px;
+    height: 32px;
+    float: left;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #E4E7ED;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 1px;
+    right: 0;
+}
+
+.wmside2 {
+    position: absolute;
+    width: 54px;
+    height: 32px;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    overflow: hidden;
+    border-bottom: 1px solid #E4E7ED;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #55595F;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wmside2 {
+    background: url("../img/icon_top.png") center no-repeat;
+    background-size: 22px;
+}
+
+.wmside2:hover {
+    background: #F5F7FA url("../img/icon_top_hover.png") center no-repeat;
+    background-size: 22px;
+}
+
+/*换肤按钮*/
+#changeS {
+    background: url("../img/icon_huanhu_nor.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+#changeS:hover {
+    background: #F5F7FA url("../img/icon_huanhu_hover.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+/*配置按钮*/
+#set {
+    background: url("../img/icon_peizhi_nor.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+#set:hover, #setshow {
+    background: #F5F7FA url("../img/icon_peizhi_hover.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+/*推送消息按钮*/
+#mesg {
+    background: url("../img/icon_tuisong_nor.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+#mesg:hover, #mesgread {
+    background: #F5F7FA url("../img/icon_tuisong_hover.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+/*待办按钮*/
+#toDo {
+    background: url("../img/icon_daiban_nor.png") no-repeat;
+    background-size: 20px;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+#toDo:hover, #done {
+    background: #F5F7FA url("../img/icon_daiban_hover.png") no-repeat;
+    background-size: 20px;;
+    background-position-x: 18px;
+    background-position-y: 10px;
+}
+
+/*我的待办窗口*/
+.daiban {
+    margin-right: 54px;
+    height: 450px;
+    width: 420px;
+    position: absolute;
+    float: left;
+    right: 0;
+    background: #FFFFFF;
+    border: 1px solid #E4E7ED;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px 0 0 4px;
+}
+
+.daibanMenu {
+    height: 45px;
+    width: 420px;
+    border-bottom: 1px solid #E4E7ED;
+}
+
+.daibantop {
+    height: 44px;
+    width: 100px;
+    background-image: url('../img/wm_bg_hover.png');
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    color: #c5123f;
+}
+
+/*我的待办列表*/
+.daibanlist {
+    width: 380px;
+    height: 360px;
+    padding: 8px 20px 0px;
+}
+
+.daibanli {
+    margin: 0 auto;
+    padding: 8px 0;
+    width: 380px;
+    height: 70px;
+    border-bottom: 1px solid #E4E7ED;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2F37;
+    letter-spacing: 0;
+}
+
+.daibanli:hover {
+    color: #c5123f;
+}
+
+/*我的待办内容*/
+.daibancontent {
+    height: 35px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.daibancontent a {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2F37;
+}
+
+.daibanname {
+    font-size: 12px;
+    color: #55595F;
+    float: left;
+}
+
+.daibandepartment {
+    font-size: 12px;
+    color: #55595F;
+    width: 230px;
+    height: 20px;
+    overflow: hidden;
+    float: left;
+}
+
+.daibantime {
+    font-size: 12px;
+    color: #55595F;
+    float: right;
+}
+
+/*我的待办页脚*/
+.daibanfoot {
+    height: 42px;
+    width: 420px;
+    position: absolute;
+    text-align: center;
+}
+
+/*我的待办查看更多*/
+.db-more-btn {
+    background-color: #c5123f;
+    margin: 5px 10px;
+    color: white;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    outline-color: #dc0000;
+    padding: 5px 10px 2px;
+}
+
+/*我的待办分页翻页*/
+.dbpage {
+    list-style-type: none;
+    width: 420px;
+    position: absolute;
+    padding-left: 90px;
+    padding-top: 5px;
+}
+
+.dbpage li {
+    float: left;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dbpage .dbpageItem {
+    border: solid thin #DDDDDD;
+}
+
+.dbpage .dbpageItemActive {
+    border: solid thin #c5123f;
+    background-color: #c5123f;
+    color: white;
+}
+
+.dbpage .dbpageItem:hover {
+    border: solid thin #c5123f;
+    background-color: #c5123f;
+    color: white;
+}
+
+.dbpage .dbpageItemDisable {
+    border: solid thin #DDDDDD;
+    background-color: #DDDDDD;
+}
+
+/*Vantiq消息推送窗口*/
+.vantiqMesg {
+    margin-right: 54px;
+    height: 500px;
+    width: 380px;
+    position: absolute;
+    float: left;
+    right: 0;
+    background: #FFFFFF;
+    border: 1px solid #E4E7ED;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px 0 0 4px;
+    padding: 18px 10px;
+}
+
+/*推送的内容*/
+.vantiqMesgContent {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.vantiqMesgDetail {
+    margin: 0 auto;
+    height: 152px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2F37;
+    letter-spacing: 0;
+    border-bottom: 1px solid #E4E7ED;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.vantiqMesgDetail22 {
+    margin: 0 auto;
+    height: 152px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2F37;
+    letter-spacing: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.vantiqMesgDetail:hover, .vantiqMesgDetail22:hover{
+    background-color: #F5F7FA;
+}
+
+
+
+/*配置窗口*/
+.wmsettingBox {
+    margin-right: 54px;
+    height: 125px;
+    width: 180px;
+    position: absolute;
+    float: left;
+    right: 0;
+    background: #FFFFFF;
+    border: 1px solid #E4E7ED;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px 0 0 4px;
+    padding: 18px 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2F37;
+    letter-spacing: 0;
+    overflow: hidden;
+}
+/*选择字体*/
+.wmsettingBox  label{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+/*选择*/
+.wmsettingBox label input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0px 10px;
+}
+
+.wmsettingBox label input[type="radio"]:after {
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #55595F;
+}
+
+.wmsettingBox label input[type="radio"]:checked:after {
+    background: #c5123f;
+    border: 3px solid #ffa99d;
+}
+
+/*确认按钮*/
+.settingBoxbtn {
+    background-color: #c5123f;
+    border: #c5123F;
+    border-radius: 10%;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    float: right;
+    margin-right: 10px;
+    outline-color: #ffa99d;
+}
